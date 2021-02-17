@@ -31,7 +31,7 @@ struct ProfileSummary: View {
                         HStack {
                             HikeBadge(name: "First Hike")
                             HikeBadge(name: "Earth Day")
-                                .hueRotation(/*@START_MENU_TOKEN@*/Angle(degrees: 90)/*@END_MENU_TOKEN@*/)
+                                .hueRotation(Angle(degrees: 90))
                             HikeBadge(name: "Tenth Hike")
                                 .grayscale(/*@START_MENU_TOKEN@*/0.50/*@END_MENU_TOKEN@*/)
                                 .hueRotation(Angle(degrees: 45))
