@@ -17,9 +17,9 @@ struct ProfileSummary: View {
         Text(profile.username)
             .bold()
             .font(.title)
-        Text("Notifications: \(profile.prefersNotification ? "On" : "Off")")
+        Text("Notifications: \(profile.prefersNotifications ? "On" : "Off")")
         Text("Seasonal Photo: \(profile.seasonalPhoto.rawValue)")
-        Text("Goal Date:") + Text(profile.goalDate, style: .date)
+        Text("Goal Date: ") + Text(profile.goalDate, style: .date)
                 
                 Divider()
                 
