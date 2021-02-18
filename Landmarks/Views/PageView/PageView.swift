@@ -9,12 +9,19 @@ import SwiftUI
 import UIKit
 
 struct PageView<Page: View>: View {
+    @State private var currentPage = 0
     var pages: [Page]
     
     var body: some View {
-        PageViewController(pages: pages)
+        VStack {
+            PageViewController(pages: pages, currentPage: $currentPage)
+            Text("Current Page: \(currentPage)")
+        }
+        
+
+        }
+        
     }
-}
 
 struct PageView_Previews: PreviewProvider {
     static var previews: some View {
