@@ -75,7 +75,7 @@ struct PageViewController<Page: View>: UIViewControllerRepresentable {
             _ pageViewController: UIPageViewController,
             didFinishAnimating finished: Bool,
             previousViewControllers: [UIViewController],
-            transitionCompleted completeed: Bool) {
+            transitionCompleted completed: Bool) {
             if completed,
                let visibleViewController = pageViewController.viewControllers?.first,
                let index = controllers.firstIndex(of: visibleViewController) {
