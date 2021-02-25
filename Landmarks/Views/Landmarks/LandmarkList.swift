@@ -12,6 +12,7 @@ struct LandmarkList: View {
     @EnvironmentObject var modelData: ModelData
     @State private var showFavoritesOnly = false
     @State private var filter = FilterCategory.all
+    @State private var selectedLandmark: Landmark?
     
     
     enum FilterCategory: String, CaseIterable, Identifiable {
@@ -35,20 +36,21 @@ struct LandmarkList: View {
         return showFavoritesOnly ? "Favorite \(title)" : title
     }
     
+    var index: Int? {
+        modelData.landmarks.firstIndex(where: { $0.id == selectedLandmark?.id })
+    }
+    
     
     var body: some View {
         NavigationView {
-            List {
-                Toggle(isOn: $showFavoritesOnly) {
-                    Text("Favorites Only")
+            List(selection: $selectedLandmark) {
+                ForEach(filteredLandmarks) { landmark in
+                    NavigationLink(
+                        destination: LandmarkDetail(landmark: landmark)) {
+                        LandmarkRow(landmark: landmark)
+                    }
+                    .tag(landmark)
                 }
-                
-            ForEach(filteredLandmarks) { landmark in
-                NavigationLink(
-                    destination: LandmarkDetail(landmark: landmark)) {
-                LandmarkRow(landmark: landmark)
-                }
-            }
             }
             .navigationTitle(title)
             .frame(minWidth: 300)
@@ -65,22 +67,23 @@ struct LandmarkList: View {
                         Toggle(isOn: $showFavoritesOnly) {
                             Label("Favorites only", systemImage: "star.fill")
                         }
-                        } label: {
+                    } label: {
                         Label("Filter", systemImage: "slider.horizontal.3")
                     }
                 }
-            
+                
             }
             
             Text("Select a Landmark")
         }
+        .focusedValue(\.selectedLandmark, $modelData.landmarks[index ?? 0])
     }
 }
 struct LandmarkList_Preview: PreviewProvider {
-        static var previews: some View {
-            LandmarkList()
-                .environmentObject(ModelData())
-
-}
+    static var previews: some View {
+        LandmarkList()
+            .environmentObject(ModelData())
+        
+    }
 }
 
