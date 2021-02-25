@@ -1,5 +1,12 @@
 //
 //  LandmarkList.swift
+//  WatchLandmarks Extension
+//
+//  Created by Simon Wachtler on 25/02/21.
+//
+
+//
+//  LandmarkList.swift
 //  Landmarks
 //
 //  Created by Simon Wachtler on 06/02/21.
@@ -34,7 +41,6 @@ struct LandmarkList: View {
             }
             }
             .navigationTitle("Landmarks")
-            .frame(minWidth: 300)
         }
     }
 }
@@ -45,4 +51,5 @@ struct LandmarkList_Preview: PreviewProvider {
 
 }
 }
+
 
