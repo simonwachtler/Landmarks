@@ -89,6 +89,7 @@
 		92C43B8825DC68CA00B0EBD2 /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C43B8725DC68CA00B0EBD2 /* ProfileSummary.swift */; };
 		92C43B8D25DC6C1C00B0EBD2 /* HikeBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C43B8C25DC6C1C00B0EBD2 /* HikeBadge.swift */; };
 		92F4876425D5B85700C8F529 /* Helpful Links in Resources */ = {isa = PBXBuildFile; fileRef = 92F4876325D5B85700C8F529 /* Helpful Links */; };
+		92FB1C8E25E83AAE00B0D5B4 /* LandmarkSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FB1C8D25E83AAE00B0D5B4 /* LandmarkSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,6 +236,7 @@
 		92C43B8725DC68CA00B0EBD2 /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
 		92C43B8C25DC6C1C00B0EBD2 /* HikeBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeBadge.swift; sourceTree = "<group>"; };
 		92F4876325D5B85700C8F529 /* Helpful Links */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Helpful Links"; sourceTree = "<group>"; };
+		92FB1C8D25E83AAE00B0D5B4 /* LandmarkSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -483,6 +485,7 @@
 				9276DDE225E1A0FB002FA73D /* Preview Content */,
 				9276DE3B25E1A654002FA73D /* LandmarkDetail.swift */,
 				9227C0AC25E7FD580008AE89 /* LandmarkCommands.swift */,
+				92FB1C8D25E83AAE00B0D5B4 /* LandmarkSettings.swift */,
 			);
 			path = MacLandmarks;
 			sourceTree = "<group>";
@@ -913,6 +916,7 @@
 			files = (
 				9276DDDF25E1A0F5002FA73D /* ContentView.swift in Sources */,
 				9276DE1925E1A487002FA73D /* Profile.swift in Sources */,
+				92FB1C8E25E83AAE00B0D5B4 /* LandmarkSettings.swift in Sources */,
 				9276DE1E25E1A487002FA73D /* ModelData.swift in Sources */,
 				9276DE1625E1A487002FA73D /* MapView.swift in Sources */,
 				9227C0AE25E7FD590008AE89 /* LandmarkCommands.swift in Sources */,
